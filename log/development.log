@@ -1,0 +1,1357 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (202.8ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (156.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (15.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+  [1m[35m (62.4ms)[0m  CREATE TABLE `movies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `gender` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (15.6ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023161500')[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToLocadora (20141023162233)
+  [1m[35m (0.0ms)[0m  ALTER TABLE `locadoras` ADD `resenha` text
+Mysql::Error: Table 'locadora_dev.locadoras' doesn't exist: ALTER TABLE `locadoras` ADD `resenha` text
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToLocadora (20141023162233)
+  [1m[35m (0.0ms)[0m  ALTER TABLE `locadoras` ADD `resenha` tinytext
+Mysql::Error: Table 'locadora_dev.locadoras' doesn't exist: ALTER TABLE `locadoras` ADD `resenha` tinytext
+Connecting to database specified by database.yml
+  [1m[36m (15.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToLocadora (20141023162233)
+  [1m[35m (0.0ms)[0m  ALTER TABLE `locadoras` ADD `resenha` tinytext
+Mysql::Error: Table 'locadora_dev.locadoras' doesn't exist: ALTER TABLE `locadoras` ADD `resenha` tinytext
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToMovie (20141023162741)
+  [1m[35m (156.0ms)[0m  ALTER TABLE `movies` ADD `review` tinytext
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023162741')[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (15.6ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToMovie (20141023162741)
+Migrating to AddColumnShelfToMovie (20141023164425)
+  [1m[35m (156.0ms)[0m  ALTER TABLE `movies` ADD `shelf` varchar(255)
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023164425')[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 14:48:30 -0200
+Connecting to database specified by database.yml
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Warning. Error encountered while saving cache C:/Workspaces/locadora/tmp/cache/sass/40e969208f7d121248cea18678c16e6adf468ed0/movies.css.scssc: can't dump anonymous class #<Class:0x3a01910>
+Compiled movies.css  (15ms)  (pid 400)
+Warning. Error encountered while saving cache C:/Workspaces/locadora/tmp/cache/sass/40e969208f7d121248cea18678c16e6adf468ed0/scaffolds.css.scssc: can't dump anonymous class #<Class:0x3a01910>
+Compiled scaffolds.css  (15ms)  (pid 400)
+Compiled application.css  (171ms)  (pid 400)
+Compiled jquery.js  (0ms)  (pid 400)
+Compiled jquery_ujs.js  (0ms)  (pid 400)
+Compiled movies.js  (795ms)  (pid 400)
+Compiled application.js  (936ms)  (pid 400)
+Completed 200 OK in 1419.6ms (Views: 1279.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:48:32 -0200
+Served asset /application.css - 200 OK (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:48:32 -0200
+Served asset /movies.css - 200 OK (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:48:32 -0200
+Served asset /scaffolds.css - 200 OK (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:32 -0200
+Served asset /jquery.js - 200 OK (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:32 -0200
+Served asset /jquery_ujs.js - 200 OK (15ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:32 -0200
+Served asset /application.js - 200 OK (15ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:32 -0200
+Served asset /movies.js - 200 OK (0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-23 14:48:38 -0200
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (78.0ms)
+  Rendered movies/new.html.erb within layouts/application (93.6ms)
+Completed 200 OK in 109.2ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:48:40 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:40 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:48:40 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:40 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:48:40 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:40 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:48:40 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-23 14:50:56 -0200
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (0.0ms)
+  Rendered movies/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31.2ms (Views: 15.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:50:57 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:50:57 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:50:57 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:50:57 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:50:57 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:50:57 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:50:57 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (15.6ms)
+  Rendered movies/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:32 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:53:47 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-23 14:54:00 -0200
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (0.0ms)
+  Rendered movies/new.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:54:01 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:54:01 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:54:01 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:54:01 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:54:01 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:54:01 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:54:01 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-10-23 14:56:30 -0200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+Ho+hPZYkxPLGOb4qXHmEPg8FiZCdaw636l3ykRzaA=", "movie"=>{"title"=>"BATMAN O CAVALEIRO DAS TREVAS RESSURGE", "gender"=>"ACAO", "review"=>"ALTAS EMOCOES COM UMA TURMA DA PESADA", "shelf"=>"A1"}, "commit"=>"Create Movie"}
+  [1m[36mSQL (78.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (78.0ms)[0m  INSERT INTO `movies` (`created_at`, `gender`, `review`, `shelf`, `title`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 23 Oct 2014 16:56:30 UTC +00:00], ["gender", "ACAO"], ["review", "ALTAS EMOCOES COM UMA TURMA DA PESADA"], ["shelf", "A1"], ["title", "BATMAN O CAVALEIRO DAS TREVAS RESSURGE"], ["updated_at", Thu, 23 Oct 2014 16:56:30 UTC +00:00]]
+  [1m[36m (31.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 187.2ms (ActiveRecord: 187.2ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2014-10-23 14:56:30 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (93.6ms)[0m  SELECT `movies`.* FROM `movies` WHERE `movies`.`id` = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 109.2ms (Views: 15.6ms | ActiveRecord: 93.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:56:31 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:56:31 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:56:31 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:31 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:31 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:31 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:31 -0200
+Served asset /application.js - 304 Not Modified (15ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31.2ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:56:41 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:20 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/new" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Processing by MoviesController#new as HTML
+  Rendered movies/_form.html.erb (15.6ms)
+  Rendered movies/new.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:58:43 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started POST "/movies" for 127.0.0.1 at 2014-10-23 14:59:39 -0200
+Processing by MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+Ho+hPZYkxPLGOb4qXHmEPg8FiZCdaw636l3ykRzaA=", "movie"=>{"title"=>"O HOBBIT A DESOLACAO DE SMAUG", "gender"=>"AVENTURA", "review"=>"PIPOCO DO TROVAO", "shelf"=>"AV01"}, "commit"=>"Create Movie"}
+  [1m[36mSQL (0.0ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.0ms)[0m  INSERT INTO `movies` (`created_at`, `gender`, `review`, `shelf`, `title`, `updated_at`) VALUES (?, ?, ?, ?, ?, ?)  [["created_at", Thu, 23 Oct 2014 16:59:39 UTC +00:00], ["gender", "AVENTURA"], ["review", "PIPOCO DO TROVAO"], ["shelf", "AV01"], ["title", "O HOBBIT A DESOLACAO DE SMAUG"], ["updated_at", Thu, 23 Oct 2014 16:59:39 UTC +00:00]]
+  [1m[36m (31.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/movies/2
+Completed 302 Found in 31.2ms (ActiveRecord: 31.2ms)
+
+
+Started GET "/movies/2" for 127.0.0.1 at 2014-10-23 14:59:39 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` WHERE `movies`.`id` = ? LIMIT 1  [["id", "2"]]
+  Rendered movies/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:40 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:40 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:40 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:40 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:40 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:40 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:40 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:42 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/1/edit" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` WHERE `movies`.`id` = ? LIMIT 1  [["id", "1"]]
+  Rendered movies/_form.html.erb (0.0ms)
+  Rendered movies/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 31.2ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:46 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started PUT "/movies/1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"w+Ho+hPZYkxPLGOb4qXHmEPg8FiZCdaw636l3ykRzaA=", "movie"=>{"title"=>"BATMAN O CAVALEIRO DAS TREVAS RESSURGE", "gender"=>"ACAO", "review"=>"ALTAS EMOCOES COM UMA TURMA DA PESADA", "shelf"=>"AC01"}, "commit"=>"Update Movie", "id"=>"1"}
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` WHERE `movies`.`id` = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mSQL (0.0ms)[0m  BEGIN
+  [1m[36m (62.4ms)[0m  [1mUPDATE `movies` SET `shelf` = 'AC01', `updated_at` = '2014-10-23 16:59:52' WHERE `movies`.`id` = 1[0m
+  [1m[35m (0.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/movies/1
+Completed 302 Found in 78.0ms (ActiveRecord: 62.4ms)
+
+
+Started GET "/movies/1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (15.6ms)[0m  [1mSELECT `movies`.* FROM `movies` WHERE `movies`.`id` = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 0.0ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:52 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 14:59:54 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:38 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:05:58 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:06:54 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 46.8ms (Views: 46.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:07:45 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:08:20 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:09:04 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Served asset /application.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Served asset /movies.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:01 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:16 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:11:37 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Served asset /scaffolds.css - 304 Not Modified (15ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:26 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:12:54 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:13:04 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:13:04 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:13:05 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:13:05 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:05 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:05 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:05 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:05 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:13:59 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 62.4ms (Views: 15.6ms | ActiveRecord: 31.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:15 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:27:32 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.0ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:05 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31.2ms (Views: 31.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:23 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (15.6ms)[0m  SELECT `movies`.* FROM `movies` 
+  Rendered movies/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 31.2ms (Views: 15.6ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:40 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.0ms)[0m  [1mSELECT `movies`.* FROM `movies` [0m
+  Rendered movies/index.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 15.6ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Served asset /movies.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/movies.css?body=1" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Served asset /movies.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-10-23 15:28:51 -0200
+Served asset /application.js - 304 Not Modified (0ms)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (124.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+  [1m[35m (77.0ms)[0m  CREATE TABLE `movies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `gender` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Mysql::Error: Table 'movies' already exists: CREATE TABLE `movies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `gender` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+Connecting to database specified by database.yml
+  [1m[36m (3.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+  [1m[35m (554.0ms)[0m  CREATE TABLE `movies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `gender` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (106.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023161500')[0m
+Migrating to AddColumnResenhaToMovie (20141023162741)
+  [1m[35m (832.0ms)[0m  ALTER TABLE `movies` ADD `review` tinytext
+  [1m[36m (109.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023162741')[0m
+Migrating to AddColumnShelfToMovie (20141023164425)
+  [1m[35m (664.0ms)[0m  ALTER TABLE `movies` ADD `shelf` varchar(255)
+  [1m[36m (64.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023164425')[0m
+Migrating to CreateUsers (20141023180408)
+  [1m[35m (413.0ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (114.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023180408')[0m
+  [1m[35m (1.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (3.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToMovie (20141023162741)
+Migrating to AddColumnShelfToMovie (20141023164425)
+Migrating to CreateUsers (20141023180408)
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (4.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToMovie (20141023162741)
+Migrating to AddColumnShelfToMovie (20141023164425)
+Migrating to CreateUsers (20141023180408)
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+  [1m[36m (481.0ms)[0m  [1mCREATE TABLE `schema_migrations` (`version` varchar(255) NOT NULL) ENGINE=InnoDB[0m
+  [1m[35m (673.0ms)[0m  CREATE UNIQUE INDEX `unique_schema_migrations` ON `schema_migrations` (`version`)
+  [1m[36m (3.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+  [1m[35m (483.0ms)[0m  CREATE TABLE `movies` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `title` varchar(255), `gender` varchar(255), `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (44.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023161500')[0m
+Migrating to AddColumnResenhaToMovie (20141023162741)
+  [1m[35m (675.0ms)[0m  ALTER TABLE `movies` ADD `review` tinytext
+  [1m[36m (49.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023162741')[0m
+Migrating to AddColumnShelfToMovie (20141023164425)
+  [1m[35m (945.1ms)[0m  ALTER TABLE `movies` ADD `shelf` varchar(255)
+  [1m[36m (73.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023164425')[0m
+Migrating to CreateUsers (20141023180408)
+  [1m[35m (367.0ms)[0m  CREATE TABLE `users` (`id` int(11) DEFAULT NULL auto_increment PRIMARY KEY, `created_at` datetime NOT NULL, `updated_at` datetime NOT NULL) ENGINE=InnoDB
+  [1m[36m (45.0ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20141023180408')[0m
+  [1m[35m (0.0ms)[0m  SELECT `schema_migrations`.`version` FROM `schema_migrations` 
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (4.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToMovie (20141023162741)
+Migrating to AddColumnShelfToMovie (20141023164425)
+Migrating to CreateUsers (20141023180408)
+Migrating to AddColumnsLoginPasswordAccounttypeToUsers (20141023181830)
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (3.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnResenhaToMovie (20141023162741)
+Migrating to AddColumnShelfToMovie (20141023164425)
+Migrating to CreateUsers (20141023180408)
+Migrating to AddColumnsLoginPasswordAccounttypeToUsers (20141023181830)
+Connecting to database specified by database.yml
+  [1m[36m (4.0ms)[0m  [1mSELECT `schema_migrations`.`version` FROM `schema_migrations` [0m
+Migrating to CreateMovies (20141023161500)
+Migrating to AddColumnLoginPasswordAccountToUsers (20141023162243)
